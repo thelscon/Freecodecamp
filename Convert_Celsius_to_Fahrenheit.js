@@ -4,10 +4,21 @@
 // и назначьте ей температуру по Фаренгейту, эквивалентную заданной температуре по Цельсию. Используйте упомянутый выше алгоритм, 
 // чтобы преобразовать температуру по Цельсию в градусы Фаренгейта.
 
+// первый способ
 function convertToF(celsius) {
     let fahrenheit;
     fahrenheit = celsius * 1.8 + 32 ;
     return fahrenheit;
 }
-  
+
 convertToF(30);
+
+
+/* //второй способ
+function convertToF(celsius) {
+    let fahrenheit;
+    fahrenheit = celsius * ( 9 / 5 ) + 32 ;
+    return fahrenheit;
+}
+
+convertToF(30); */
