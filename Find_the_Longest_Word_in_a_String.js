@@ -26,3 +26,11 @@ function findLongestWordLength(str) {
 }
   
 findLongestWordLength("The quick brown fox jumped over the lazy dog"); */
+
+/* //третий способ
+function findLongestWordLength(str) {
+    str = str.split ( ' ' ).reduce ( (x, y) => ( x.length > y.length ) ? x : y ) ;    
+    return str.length;
+}
+  
+findLongestWordLength("The quick brown fox jumped over the lazy dogasdasd") ; */
