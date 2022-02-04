@@ -10,8 +10,7 @@ function confirmEnding(str, target) {
 
     do {
 
-        if ( target [ target.length - numberChar ] === str [ str.length - numberChar ]  ) {
-            ++numberChar ;
+        if ( target [ target.length - numberChar ] === str [ str.length - numberChar++ ]  ) {
             yesNo = true ;
         }
         else {
