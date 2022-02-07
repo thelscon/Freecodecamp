@@ -4,9 +4,7 @@
 тест, верните undefined. */
 
 function findElement(arr, func) {
-
-    return arr.find ( func ) ? arr.find ( func ) : undefined ;
-
+    return arr.find( func ) ? arr.find( func ) : undefined ;
 }
   
 findElement([1, 2, 3, 4], num => num % 2 === 0) ;

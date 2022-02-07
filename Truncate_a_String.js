@@ -3,10 +3,10 @@
 // строку с ...окончанием.
 
 function truncateString(str, num) {
-    if ( str.length > num ) {
-        str = str.substr ( 0, num ) + '...' ;
+    if( str.length > num ) {
+        str = str.substr( 0, num ) + '...' ;
     }
-    return str;
-}
+    return str ;
+  }
   
-truncateString("A-tisket a-tasket A green and yellow basket", 8);
+  truncateString("A-tisket a-tasket A green and yellow basket", 8);

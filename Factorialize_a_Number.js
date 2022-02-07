@@ -8,35 +8,19 @@
 
 // первый способ
 function factorialize(num) {
-
-    if ( num > 0 ) {
-        let factorial = num ;
-        for ( let i = 1 ; i < factorial ; ++i ) {
-            num *= i ;
-        }
-    }
-    else {
-        num = 1 ;
-    }
-    
-    return num;
-}  
-
+    let factorial = 1 ;
+    for( let i = 1; i <= num; ++i ) {
+        factorial *= i ;
+    }    
+    return factorial;
+}
 factorialize(5);
 
 
 /* //второй способ
 function factorialize(num) {
-
-    if ( num > 0 ) {
-        let factorial = num ;
-        num *= factorialize ( num - 1 ) ;
-    }
-    else {
-        num = 1 ;
-    }
-    
-    return num;
-}
-  
-factorialize(5); */
+    let factorial = 1 ;
+    factorial = num >= 1 ? num * factorialize( num - 1 ) : factorial ;
+    return factorial;
+}  
+factorialize(5);*/

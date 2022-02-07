@@ -5,21 +5,13 @@
 
 function confirmEnding(str, target) {
     let yesNo = false ;
-
     let numberChar = 1 ;
 
-    do {
-
-        if ( target [ target.length - numberChar ] === str [ str.length - numberChar++ ]  ) {
-            yesNo = true ;
-        }
-        else {
-            yesNo = false ;
-        }
-
-    } while ( numberChar <= target.length && yesNo ) ;
+    do{
+        yesNo = ( target [ target.length - numberChar ] === str [ str.length - numberChar++ ]  )
+            ? true 
+            : false ;
+    }while( numberChar <= target.length && yesNo ) ;
 
     return yesNo;
 }
-  
-console.log ( confirmEnding("Bastian", "n") );

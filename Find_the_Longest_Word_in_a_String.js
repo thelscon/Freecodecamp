@@ -3,34 +3,22 @@
 
 // первый способ
 function findLongestWordLength(str) {
-    let tmp = str.split ( ' ' ) ;
-    let maxLength = 0 ;
-    tmp.forEach ( value => 
-        maxLength = value.length > maxLength ? value.length : maxLength ) ;
+    let tmp = str.split( ' ' );
+    let maxLength = 0;
+    tmp.forEach( value => 
+        {
+            if ( value.length > maxLength ) {
+                maxLength = value.length ;
+            }
+        }
+    )
     return maxLength;
-}
-  
+}  
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
-/* // второй способ
+/* //второй способ
 function findLongestWordLength(str) {
-    let tmp = str.split ( ' ' ) ;
-    let maxLength = 0 ;
-    tmp.forEach ( value => {
-        if ( value.length > maxLength ) {
-            maxLength = value.length ;
-            str = value ;
-        }
-    } ) ;
-    return str.length;
+    str = str.split( ' ' ).reduce( ( x, y  => ( x.length > y.length ) ? x : y );    
+  return str.length;
 }
-  
-findLongestWordLength("The quick brown fox jumped over the lazy dog"); */
-
-/* //третий способ
-function findLongestWordLength(str) {
-    str = str.split ( ' ' ).reduce ( (x, y) => ( x.length > y.length ) ? x : y ) ;    
-    return str.length;
-}
-  
-findLongestWordLength("The quick brown fox jumped over the lazy dogasdasd") ; */
+findLongestWordLength("The quick brown fox jumped over the lazy dogasdasd"); */

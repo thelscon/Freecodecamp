@@ -3,15 +3,13 @@
 положительным числом. Для целей этой задачи не используйте встроенный .repeat()метод. */
 
 function repeatStringNumTimes(str, num) {
-
     let returnStr = '' ;
-
-    for ( let item = 1 ; item <= num ; ++item ) {
-        returnStr += str ;
-    }
-
-    return returnStr;
-
-}
   
-repeatStringNumTimes("abc", 3 );
+      for( let item = 1 ; item <= num ; ++item ) {
+          returnStr += str ;
+      }
+  
+      return returnStr ;
+  }
+  
+  repeatStringNumTimes("abc", 3);
