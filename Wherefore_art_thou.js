@@ -11,7 +11,7 @@ function whatIsInAName(collection, source) {
     const arr = [];
 
     arr.push ( 
-        ...collection.filter ( obj => {
+        ...collection.filter ( obj => { 
             let flag = true ;
             for ( let value in source ) {
                 if ( source[value] !== obj[value] ) {
@@ -19,7 +19,8 @@ function whatIsInAName(collection, source) {
                     break ;
                 }
             }
-            return flag ;
+            return flag ; 
+            //предикат в виде flag заставил по другому смотреть на саму суть предикатов, круто !)
         } )
     ) ;
 
