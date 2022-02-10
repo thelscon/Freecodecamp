@@ -3,7 +3,43 @@
 всегда будет первым.
 Например, sumAll([4,1])должно возвращаться , 10 потому что сумма всех чисел от 1 до 4 (оба включительно) равна 10. */
 
-//второй способ
+//третий способ
+function sumAll(arr) {
+
+    const newArray = [] ;       //определяем резльтирующий массив
+    let step = 0 ;              //определяем шаг увеличения или уменьшения каждого следующего значения
+    newArray.push ( arr[0] )    
+
+    while ( true ) {
+        //условие при одинаковых значениях
+        if ( arr[1] === newArray[newArray.length - 1] ) {
+            newArray.push ( arr[1] ) ;
+            return newArray.reduce ( ( x , y ) => x + y ) ;
+        }
+        else {
+            //иначе получаем шаг увеличения или уменьшения
+            if ( arr[1] > newArray[0] ) {
+                step = 1 ;
+            }
+            else {
+                step = -1 ;
+            }
+            //заполняем результирующий массив
+            if ( Math.abs ( arr[1] - newArray[newArray.length - 1] ) === 1 ) {
+                newArray.push ( newArray[newArray.length - 1] + step ) ;
+                return newArray.reduce ( ( x , y ) => x + y ) ;
+            }
+            if ( Math.abs ( arr[1] - newArray[newArray.length - 1] ) > 1 ) {
+                newArray.push ( newArray[newArray.length - 1] + step ) ;
+            }
+        }        
+    }
+
+}
+  
+sumAll([1, 1]);
+
+/* //второй способ
 function sumAll(arr) {
 
     const newArray = [] ;    
@@ -31,7 +67,7 @@ function sumAll(arr) {
 
 }
   
-console.log ( sumAll([10, 11]) );
+sumAll([1, 1]) */
 
 /* //первый способ
 function sumAll(arr) {
@@ -50,4 +86,4 @@ function sumAll(arr) {
     }
 }
   
-console.log ( sumAll([1, 4]) ); */
+sumAll([1, 1]) */
