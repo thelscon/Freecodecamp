@@ -3,9 +3,11 @@
 
 //второй способ, с использованием RegExp
 function spinalCase(str) {
+
     const   pattern0 = /[a-z][A-Z]/g ,      // aA => a-a
             pattern1 = /\s|_/g ,            // ' ' | '_' => '-'
             pattern2 = /[A-Z]|(-[A-Z])/g ;  // A | -A => a | -a
+            
     str = str   .replace ( pattern0 , value => `${value[0]}-${value[1].toLowerCase()}` )    // aA => a-a
                 .replace ( pattern1 , '-' )                                                 // ' ' | '_' => '-'
                 .replace ( pattern2 , value => value.toLowerCase() ) ;                      // A | -A => a | -a
